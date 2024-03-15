@@ -73,15 +73,14 @@ def warp_ip():
     with open(result_path, 'r') as csv_file:
         next(csv_file)
         ip1 = next(csv_file).split(',')[0]
-        ip2 = next(csv_file).split(',')[0]
-        config_prefix = f'warp://{ip1}?ifp=10-20&ifps=20-60&ifpd=5-10#Warp-IN-Warp&&detour=warp://{ip2}?ifp=10-20&ifps=20-60&ifpd=5-10#Warp-IR'
+        config_prefix = f'warp://{ip1}?ifp=10-20&ifps=40-100&ifpd=10-20#Warp 🇮🇷&&detour=warp://{ip1}?ifp=10-20&ifps=40-100&ifpd=10-20#WarpInWarp 🇩🇪'
     return config_prefix, formatted_time
 
 
 title = "//profile-title: base64:" + base64.b64encode('Women Life Freedom ✌️'.encode('utf-8')).decode('utf-8') + "\n"
 update_interval = "//profile-update-interval: 1\n"
 sub_info = "//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531\n"
-profile_web = "//profile-web-page-url: https://github.com/ByteMysticRogue\n"
+profile_web = "//profile-web-page-url: https://github.com/Amirxsharafi\n"
 last_modified = "//last update on: " + warp_ip()[1] + "\n"
 configs = warp_ip()[0]
 with open('warp.json', 'w') as op:
