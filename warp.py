@@ -69,7 +69,7 @@ else:
 
 def warp_ip():
     creation_time = os.path.getctime(result_path)
-    formatted_time = datetime.datetime.fromtimestamp(creation_time).strftime("%Y-%m-%d %H:%M:%S")
+    formatted_time = datetime.datetime.fromtimestamp(creation_time).strftime("%d-%m-%Y %H:%M")
     with open(result_path, 'r') as csv_file:
         next(csv_file)
         ip1 = next(csv_file).split(',')[0]
