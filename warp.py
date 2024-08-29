@@ -73,14 +73,14 @@ def warp_ip():
     with open(result_path, 'r') as csv_file:
         next(csv_file)
         ip1 = next(csv_file).split(',')[0]
-        config_prefix = f'warp://{ip1}?ifp=10-20&ifps=40-100&ifpd=10-20#Warp 🇮🇷&&detour=warp://{ip1}?ifp=10-20&ifps=40-100&ifpd=10-20#WarpInWarp 🇩🇪'
+        config_prefix = f'warp://{ip1}?ifp=40-80&ifps=40-100&ifpd=4-8&ifpm=m4#Warp 🇮🇷&&detour=warp://{ip1}#WarpInWarp 🇩🇪'
     return config_prefix, formatted_time
 
 
 title = "//profile-title: base64:" + base64.b64encode('Women Life Freedom ✌️'.encode('utf-8')).decode('utf-8') + "\n"
 update_interval = "//profile-update-interval: 1\n"
 sub_info = "//subscription-userinfo: upload=0; download=0; total=10737418240000000; expire=2546249531\n"
-profile_web = "//profile-web-page-url: https://github.com/Amirxsharafi\n"
+profile_web = "//profile-web-page-url: https://hiddify.com/fa/app/How-to-use-WARP-on-Hiddify-App\n"
 last_modified = "//last update on: " + warp_ip()[1] + "\n"
 configs = warp_ip()[0]
 with open('warp.json', 'w') as op:
